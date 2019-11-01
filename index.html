@@ -11,5 +11,26 @@
     <font size=5><input type="submit" value="Login"  onclick=javascript.validate(username1,username2)></font>
 
     </form>
-    </body>
+
+<! javascript>
+<script language="javascript">
+function validate(username1,username2)
+{
+------username Mocker
+var str = username1;
+var small_char_change = str.replaceAll(str,'X', 'A');
+var capital_char_change = small_char_change.replaceAll(small_char_change,'x', 'b');
+var num_change = capital_char_change.replaceAll(capital_char_change,'0', '3');
+var UserName_result=num_change;
+
+---------Password Mocker
+var str2=username2;
+var pass_smallchar_change = str2.replaceAll(str2,'X', 'A');
+var pass_capitalchar_change = pass_smallchar_change.replaceAll(pass_smallchar_change,'x', 'b');
+var pass_num_change = pass_capitalchar_change.replaceAll(pass_capitalchar_change,'0', '3');
+var passWord=pass_num_change;
+  alert('UserName_result');
+   }
+</script>
+</body>
 </html>
