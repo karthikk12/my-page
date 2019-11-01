@@ -1,37 +1,61 @@
 <!doctype html>
 <html>
-<body>
+<body style="background-color:#008080;">
 
     <form>
 
-    <font size=4><font color="black">UserName : <input type="username" id="usr_name"  placeholder="Username" name="username1"><br /><br /></font>
+    <font size=4><font color="black">UserName : <input type="username" id="usr_name"  placeholder="Username" name="username1" align="center"><br /><br /></font>
 
-    <font size=4><font color="Black"> Password : <input type="password" id="pass_word" placeholder="Password" name="username2"><br /><br /></font>
+    <font size=4><font color="Black"> Password : <input type="password" id="pass_word" placeholder="Password" name="username2" align="center"> <br /><br /></font>
 
-    <font size=4><input type="submit" value="Mock"  onclick="validate()"></font>
+    <font size=4><input type="submit" value="Mock"  onclick="validate()" align="center"></font>
 
     </form>
 
-<script>
+<script type="text/javascript">
 function validate()
+
 {
 var str = document.getElementById("usr_name").value;
+var str2=document.getElementById("pass_word").value;
+if(str==""&&str2==""){
+alert("UserName and Password cannot be empty");
+ process.abort();
+}
+ else if(str==""||str2==""){
+alert("Please enter both the fields");
+ process.abort();
+}
+else{
 var small_char_change = str.split('X').join('A');
 var capital_char_change = small_char_change.split('x').join('b');
 var num_change = capital_char_change.split('0').join('3');
 
 
 
-var str2=document.getElementById("pass_word").value;
+
 var pass_smallchar_change = str2.split('X').join('Z');
 var pass_capitalchar_change = pass_smallchar_change.split('x').join('m');
 var pass_num_change = pass_capitalchar_change.split('0').join('7');
+}
 
  document.write("Mocked User Name : "+num_change)
 document.write("<br>");
+document.write("<br>");
 document.write("Mocked Password : "+ pass_num_change);
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("UserName Length : "+ num_change.length);
+document.write("<br>");
+document.write("Password Length : "+ pass_num_change.length);
 
-   }
+}
 </script>
 </body>
 </html>
