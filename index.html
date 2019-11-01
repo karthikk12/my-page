@@ -4,34 +4,34 @@
 
     <form>
 
-    <font size=5><font color="black"><input type="username" placeholder="Username" name="username1"><br /><br /></font>
+    <font size=4><font color="black">UserName : <input type="username" id="usr_name"  placeholder="Username" name="username1"><br /><br /></font>
 
-    <font size=5><font color="white"><input type="password" placeholder="Password" name="username2"><br /><br /></font>
+    <font size=4><font color="Black"> Password : <input type="password" id="pass_word" placeholder="Password"  name="username2"><br /><br /></font>
 
-    <font size=5><input type="submit" value="Login"  onclick=javascript.validate(username1,username2)></font>
+    <font size=4><input type="submit" value="Mock"   onclick="validate()"></font>
 
     </form>
 
-<! javascript>
 <script language="javascript">
-function validate(username1,username2)
+function validate()
 {
 ------username Mocker
-var str = username1;
+var str = documet.getElementByID('usr_name').value;
 var small_char_change = str.replaceAll(str,'X', 'A');
 var capital_char_change = small_char_change.replaceAll(small_char_change,'x', 'b');
 var num_change = capital_char_change.replaceAll(capital_char_change,'0', '3');
 var UserName_result=num_change;
+alert(UserName_result); 
 
 ---------Password Mocker
-var str2=username2;
+var str2=documet.getElementByID('password').value;
 var pass_smallchar_change = str2.replaceAll(str2,'X', 'A');
 var pass_capitalchar_change = pass_smallchar_change.replaceAll(pass_smallchar_change,'x', 'b');
 var pass_num_change = pass_capitalchar_change.replaceAll(pass_capitalchar_change,'0', '3');
 var passWord_result=pass_num_change;
 
+alert(UserName_result); 
 
-window.alert(UserName_result);
    }
 </script>
 </body>
