@@ -8,15 +8,15 @@
 
     <font size=4><font color="Black"> Password : <input type="password" id="pass_word" placeholder="Password"  name="username2"><br /><br /></font>
 
-    <font size=4><input type="submit" value="Mock"   onclick="validate()"></font>
+    <font size=4><input type="submit" value="Mock" id="test"  onclick="validate()"></font>
 
     </form>
 
-<script language="javascript">
+<script>
 function validate()
 {
 ------username Mocker
-var str = documet.getElementByID('usr_name').value;
+var str = document.getElementById('usr_name').value;
 var small_char_change = str.replaceAll(str,'X', 'A');
 var capital_char_change = small_char_change.replaceAll(small_char_change,'x', 'b');
 var num_change = capital_char_change.replaceAll(capital_char_change,'0', '3');
@@ -24,7 +24,7 @@ var UserName_result=num_change;
 alert(UserName_result); 
 
 ---------Password Mocker
-var str2=documet.getElementByID('password').value;
+var str2=document.getElementById('password').value;
 var pass_smallchar_change = str2.replaceAll(str2,'X', 'A');
 var pass_capitalchar_change = pass_smallchar_change.replaceAll(pass_smallchar_change,'x', 'b');
 var pass_num_change = pass_capitalchar_change.replaceAll(pass_capitalchar_change,'0', '3');
