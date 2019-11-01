@@ -6,32 +6,30 @@
 
     <font size=4><font color="black">UserName : <input type="username" id="usr_name"  placeholder="Username" name="username1"><br /><br /></font>
 
-    <font size=4><font color="Black"> Password : <input type="password" id="pass_word" placeholder="Password"  name="username2"><br /><br /></font>
+    <font size=4><font color="Black"> Password : <input type="password" id="pass_word" placeholder="Password" name="username2"><br /><br /></font>
 
-    <font size=4><input type="submit" value="Mock" id="test"  onclick="validate()"></font>
+    <font size=4><input type="submit" value="Mock"  onclick="validate()"></font>
 
     </form>
 
 <script>
 function validate()
 {
-alert('hi'); 
-------username Mocker
-var str = document.getElementById('usr_name').value;
-var small_char_change = str.replaceAll(str,'X', 'A');
-var capital_char_change = small_char_change.replaceAll(small_char_change,'x', 'b');
-var num_change = capital_char_change.replaceAll(capital_char_change,'0', '3');
-var UserName_result=num_change;
-alert(UserName_result); 
+var str = document.getElementById("usr_name").value;
+var small_char_change = str.split('X').join('A');
+var capital_char_change = small_char_change.split('x').join('b');
+var num_change = capital_char_change.split('0').join('3');
 
----------Password Mocker
-var str2=document.getElementById('password').value;
-var pass_smallchar_change = str2.replaceAll(str2,'X', 'A');
-var pass_capitalchar_change = pass_smallchar_change.replaceAll(pass_smallchar_change,'x', 'b');
-var pass_num_change = pass_capitalchar_change.replaceAll(pass_capitalchar_change,'0', '3');
-var passWord_result=pass_num_change;
 
-alert(UserName_result); 
+
+var str2=document.getElementById("pass_word").value;
+var pass_smallchar_change = str2.split('X').join('Z');
+var pass_capitalchar_change = pass_smallchar_change.split('x').join('m');
+var pass_num_change = pass_capitalchar_change.split('0').join('7');
+
+ document.write("Mocked User Name : "+num_change)
+document.write("<br>");
+document.write("Mocked Password : "+ pass_num_change);
 
    }
 </script>
