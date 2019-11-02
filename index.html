@@ -29,11 +29,11 @@ var str = document.getElementById("usr_name").value;
 var str2=document.getElementById("pass_word").value;
 if(str==""&&str2==""){
 alert("UserName and Password cannot be empty");
- process.abort();
+
 }
  else if(str==""||str2==""){
 alert("Please enter both the fields");
- process.abort();
+
 }
 else{
 var small_char_change = str.split('X').join('A');
@@ -80,12 +80,12 @@ alert('Email id and password should not be empty');
 }
  else if(str3==""||str_pass==""){
 alert('Please Enter both the Field');
- process.abort();
+
 }
 
 else if(str3.length<10 ){
 alert('Invlaid response..Please check length of email id');
- process.abort();
+
 }
 else{
 var res = str3.substring(dif, str3.length);
