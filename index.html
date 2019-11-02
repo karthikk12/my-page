@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <body style="background-color:#008080;">
-<h1 style="font-size:50px; " align="center">Data Mocker</h1>
+<h1 style="font-size:50px; color: Black"align="center">Data Mocker</h1>
 <br/>
     <form>
 <div>
@@ -27,8 +27,8 @@
 function validate()
 
 {
-var str = document.getElementById("usr_name").value;
-var str2=document.getElementById("pass_word").value;
+var str = document.getElementById("usr_name").value="";
+var str2=document.getElementById("pass_word").value="";
 if(str==""&&str2==""){
 alert("UserName and Password cannot be empty");
  process.abort();
@@ -67,7 +67,7 @@ document.write("<br>");
 document.write("--------------->UserName Length : "+ num_change.length);
 document.write("<br>");
 document.write("--------------->Password Length : "+ pass_num_change.length);
-document.write("<p>Link: " + txt.link("https://karthikk12.github.io/my-page/") + "</p>");
+
 
 }
 
@@ -118,7 +118,6 @@ document.write("----------------->Email_id length: "+result.length);
 document.write("<br>");
 document.write("----------------->Password length: "+ep_pass_symbolchanger.length);
 
-document.write("<p>Link: " + txt.link("https://karthikk12.github.io/my-page/") + "</p>");
 
 }
 }
